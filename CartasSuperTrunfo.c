@@ -1,10 +1,12 @@
 #include <stdio.h>
 int main(){
+    //DECLARAÇÃO DAS VARIÁVEIAS DE PROJETO
     char letraEstado1 = 'A', letraEstado2 = 'A'; 
     char codCarta1[3], codCarta2[3], nome1[30], nome2[30];
     int populacao1 = 0, populacao2 = 0, pontosTur1 = 0, pontosTur2 = 0;
     float area1 = 0, area2 = 0, pib1 = 0, pib2 = 0;
     
+    //LEITURA DOS DADOS DA PRIMEIRA CARTA
     printf("Desafio Super Trunfo\n");
     printf("\nOlá, vamos cadastrar sua 1° carta\n");
 
@@ -34,6 +36,7 @@ int main(){
     printf("Informe o número de pontos turísticos da cidade: \n");
     scanf("%i", &pontosTur1);
 
+    //EXIBÇÃO DOS DADOS CADASTRADOS PELO USUÁRIO REFERENTES À 1° CARTA
     printf("\nCARTA 1 \n");
     printf("Estado: %c\n", letraEstado1);
     printf("Código: %s\n", codCarta1);
@@ -43,6 +46,7 @@ int main(){
     printf("PIB: %.2f\n", pib1);
     printf("Pontos Turísticos: %i\n", pontosTur1);
 
+    //LEITURA DOS DADOS DA SEGUNDA CARTA
     printf("\nAgora repita o processo para sua 2° carta\n");
 
     printf("Digite a letra que representa o estado (A-H): \n");
@@ -50,7 +54,7 @@ int main(){
     do {
         c2 = getchar();
     } while (c2 == '\n' || c2 == ' ');
-    letraEstado2 = (char)c2;
+    letraEstado2 = (char)c2; 
 
     printf("Digite o código da sua carta (ex: A01, B03): \n");
     scanf("%s", codCarta2);
@@ -70,6 +74,7 @@ int main(){
     printf("Informe o número de pontos turísticos da cidade: \n");
     scanf("%i", &pontosTur2);
 
+    //EXIBÇÃO DOS DADOS CADASTRADOS PELO USUÁRIO REFERENTES À 2° CARTA
     printf("\nCARTA 2 \n");
     printf("Estado: %c\n", letraEstado2);
     printf("Código: %s\n", codCarta2);
