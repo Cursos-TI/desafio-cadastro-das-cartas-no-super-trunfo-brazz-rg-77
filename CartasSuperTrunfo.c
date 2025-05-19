@@ -108,26 +108,27 @@ int main(){
     printf("PIB per capita: R$ %.2f\n", pibpcap2);
     printf("O Super Poder da segunda carta vale: %f\n", superPoder2);
 
-    //COMPARANDO OS ATRIBUTOS
-    int resultadoPopulação = populacao1 > populacao2;
-    int resultadoArea = area1 > area2;
-    int resultadoPIB = pib1 > pib2;
-    int resultadoPontosTur = pontosTur1 > pontosTur2;
-    int resultadoDesnsidade = densidade1 < densidade2;
-    int resultadoPIBpCapita = pibpcap1 > pibpcap2;
-    int resultadoSuperPoder = superPoder1 > superPoder2;
-
-    //MOSTRANDO O RESULTADO DA CARTA VENCEDORA
-    printf("\nApós analisar as duas cartas segue abaixo a carta vencedora\n");
-    printf("OBS: (1 para verdadeiro = Carta 1 vence e 0 para falso = Carta 2 vence)\n");
-    printf("\nPopulação: Carta 1 venceu? (%i)\n", resultadoPopulação);
-    printf("Área: Carta 1 venceu? (%i)\n", resultadoArea);
-    printf("PIB: Carta 1 venceu? (%i)\n", resultadoPIB);
-    printf("Pontos Turísticos: Carta 1 venceu? (%i)\n", resultadoPontosTur);
-    printf("Densidade Populacional: Carta 1 venceu? (%i)\n", resultadoDesnsidade);
-    printf("PIB per Capita: Carta 1 venceu? (%i)\n", resultadoPIBpCapita);
-    printf("Super Poder: Carta 1 venceu? (%i)\n", resultadoSuperPoder);
-
+    //COMPARANDO AS CARTAS USANDO IF/ELSE (PIB PER CAPITA)
+    printf("\nAgora vamos ver qual carta é a vencedora \n");
+    if (pibpcap1 > pibpcap2)
+    {
+        printf("A Carta 1 (%s) tem pib per capita igual a %.2f! \n", nome1, pibpcap1);    
+        printf("A Carta 2 (%s) tem pib per capita igual a %.2f! \n", nome2, pibpcap2);
+        printf("Logo, a Carta 1 é a vencedora!");
+    }else{
+        if (pibpcap1 < pibpcap2)
+        {
+        printf("A Carta 1 (%s) tem pib per capita igual a %.2f! \n", nome1, pibpcap1);    
+        printf("A Carta 2 (%s) tem pib per capita igual a %.2f! \n", nome2, pibpcap2);
+        printf("Logo, a Carta 2 é a vencedora!");
+        }else{
+        printf("A Carta 1 (%s) tem pib per capita igual a %.2f! \n", nome1, pibpcap1);    
+        printf("A Carta 2 (%s) tem pib per capita igual a %.2f! \n", nome2, pibpcap2);
+        printf("Logo, as Cartas estão empatadas!");
+        }
+        
+    }
+    
     
     return 0;
 }
